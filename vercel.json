@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source":"/(.*)", "destination": "/myblog-ochre-nu.vercel.app" }
+  ]
+}
