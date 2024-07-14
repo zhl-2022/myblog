@@ -435,7 +435,7 @@ $(document).ready(function () {
         arrows: true,
         dots: false,
         speed: 1600,
-        prevArrow: '<button type="button" class="services-gallery-main-prev"><img src="assets/images/slider-right-arrow.svg" alt="slider-right-arrow"></button>',
-        nextArrow: '<button type="button" class="services-gallery-main-next"><img src="assets/images/slider-left-arrow.svg" alt="slider-left-arrow"></button>',
+        prevArrow: '<button type="button" class="services-gallery-main-prev"><img src="/static/assets/images/slider-right-arrow.svg" alt="slider-right-arrow"></button>',
+        nextArrow: '<button type="button" class="services-gallery-main-next"><img src="/static/assets/images/slider-left-arrow.svg" alt="slider-left-arrow"></button>',
     });
 });
