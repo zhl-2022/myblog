@@ -237,11 +237,23 @@ cursorScale.forEach(link => {
 $(document).ready(function () {
     $("#toggle").click(function () {
         var elem = $("#toggle").text();
-        if (elem == "Load More") {
-            $("#toggle").text("Load Less");
+        if (elem == "Add One?") {
+            $("#toggle").text("End!");
             $(".text").slideDown();
         } else {
-            $("#toggle").text("Load More");
+            $("#toggle").text("Add One?");
+            $(".text").slideUp();
+        }
+    });
+});
+$(document).ready(function () {
+    $("#seed").click(function () {
+        var elem = $("#seed").text();
+        if (elem == "Seet!") {
+            $("#toggle").text("Seed!");
+            $(".text").slideDown();
+        } else {
+            $("#toggle").text("Seet!");
             $(".text").slideUp();
         }
     });

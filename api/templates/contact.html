@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-hans">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +13,21 @@
     <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/media_query.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/flash.css') }}"/>
 
 </head>
 <body>
+<div class="flash-message">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</div>
 <div class="site_contain">
     <!-- ====================================== Cusrsor ===================================== -->
     <div class="cursor"></div>
@@ -31,7 +43,7 @@
         <div class="container">
             <div class="top-navbar_full">
                 <div class="back-btn container3">
-                    <a href="{{ url_for('home') }}">
+                    <a href="{{ url_for('blog.blog') }}">
                         <h1>
                             <mark>Blog</mark>
                         </h1>
@@ -40,27 +52,14 @@
                 </div>
                 <div class="hell">
                     <ul class="top-navbar-title">
-                        <li><a href="{{ url_for('home') }}">Home</a></li>
-                        <li><a href="{{ url_for('blog') }}">Blog</a></li>
-                        <li class="menu-active"><a href="{{ url_for('contact') }}">Contact</a></li>
+                        <li><a href="{{ url_for('blog.blog') }}">Blog</a></li>
+                        <li><a href="{{ url_for('add.add') }}">Add</a></li>
+                        <li class="menu-active"><a href="{{ url_for('contact.contact') }}">Contact</a></li>
                     </ul>
-                    <a href="{{ url_for('static', filename = 'assets/pdf/olivia_resume.pdf') }}">
-                        <div class="cv-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none">
-                                <g clip-path="url(#clip0_25_74)">
-                                    <path d="M12 3V15" stroke="#0F141C" stroke-width="2" stroke-linecap="round"
-                                          stroke-linejoin="round"/>
-                                    <path d="M16 11L12 15L8 11" stroke="#0F141C" stroke-width="2"
-                                          stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path
-                                            d="M3 12C3 14.3869 3.94821 16.6761 5.63604 18.364C7.32387 20.0518 9.61305 21 12 21C14.3869 21 16.6761 20.0518 18.364 18.364C20.0518 16.6761 21 14.3869 21 12"
-                                            stroke="#0F141C" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round"/>
-                                </g>
-                            </svg>
-                        </div>
-                    </a>
+                    <div class="input-main">
+                        <input type="text" name="text" placeholder="Search" autocomplete="off">
+                    </div>
+                    <img src="{{ getProfilePicture(session.get('userName'))  or url_for('static', filename = 'assets/images/oig3.jpg') }}" alt="user-logo" class="user-logo">
                     <div class="outer-menu">
                         <input class="checkbox-toggle" type="checkbox" name="checkbox">
                         <div class="hamburger">
@@ -75,14 +74,14 @@
                                             <div class="col-lg-2">
                                                 <div class="menu-text">
                                                     <div class="side-menu-text">
-                                                        <p>menu</p>
+                                                        <p>Memu</p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-7 side-menu-scroll">
-                                                <div class="heading2"><a href="{{ url_for('home') }}">Home</a></div>
-                                                <div class="heading2"><a href="{{ url_for('blog') }}">Blog</a></div>
-                                                <div class="heading2"><a href="{{ url_for('contact') }}">Contact</a></div>
+                                                <div class="heading2"><a href="{{ url_for('blog.blog') }}">Blog</a></div>
+                                                <div class="heading2"><a href="{{ url_for('add.add') }}">Add</a></div>
+                                                <div class="heading2"><a href="{{ url_for('contact.contact') }}">Contact</a></div>
                                             </div>
                                             <div class="col-lg-3">
                                                 <div class="cont-info">
@@ -91,9 +90,8 @@
                                                         <p class="geek-alto"> 南山区 <br>深圳, 中国</p>
                                                     </div>
                                                     <div class="item">
-                                                        <p class="sub-title-address"> 联系我 </p>
+                                                        <p class="sub-title-address"> 联系 我 </p>
                                                         <p>zhanghuiliu2020@163.com</p>
-                                                        <p class="underline">13132277902</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -113,122 +111,119 @@
     <section class="section-main contact-section-main overflow-hidden" id="section-main-id">
         <div class="container">
             <p class="main-text my-services" data-aos="fade-down">留下你的联系方式</p>
-            <h1 class="ui-ux" data-aos="fade-down">让我们一起做一些很棒的事情！</h1>
+            <h1 class="ui-ux" data-aos="fade-down">让我们做一些很棒的事情！</h1>
         </div>
+
     </section>
     <!-- ====================================== Conatct Section One End===================================== -->
     <!-- ====================================== Conatct Section two ===================================== -->
     <section class="section-two-my-services">
         <div class="container" id="form-conatiner">
-            <div class="row" id="form">
-                <div class="col-xxl-8 col-xl-8 col-lg-8 ">
-                    <form class="form-main">
-                        <div class="form-main-sub">
-                            <div class="input-main-form">
-                                <p class="name">姓名:</p>
-                                <input type="text" name="name" placeholder="Your name" autocomplete="off">
-                            </div>
-                            <div class="input-main-form">
-                                <p class="name">邮箱:</p>
-                                <input type="email" name="name" placeholder="Your email" autocomplete="off">
-                            </div>
-                        </div>
-                        <div class="form-main-sub">
-                            <div class="input-main-form">
-                                <p class="name">电话 (可选):</p>
-                                <input type="text" name="name" placeholder="Your phone" autocomplete="off">
-                            </div>
-                            <div class="input-main-form">
-                                <p class="name">主题:</p>
-                                <input type="text" name="name" placeholder="Your subject" autocomplete="off">
-                            </div>
+            <div class="col-xxl-12 col-xl-12 col-lg-12">
+                <form class="form-main" method="post" id="recaptchaForm">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <div class="form-main-sub">
+                        <div class="input-main-form">
+                            <p class="name">名字:</p>
+                            <input type="text" name="userName" placeholder="登录时不填">
                         </div>
                         <div class="input-main-form">
-                            <p class="name">信息:</p>
-                            <textarea placeholder="Type your message..."></textarea>
+                            <p class="name">邮箱:</p>
+                            <input type="email" name="email" placeholder="必填">
                         </div>
-                        <div class="form-submit-btn-main">
-                            <button class="explore-btn hover-slide-right form-submit-btn">
-                                    <span id="toggle">提交
-                                        <svg class="expo-arrow2" xmlns="http://www.w3.org/2000/svg" width="32"
-                                             height="32" viewBox="0 0 32 32" fill="none">
-                                            <g>
-                                                <path d="M6.66669 16H25.3334" stroke="#FFDB59" stroke-width="2"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M20 21.3333L25.3333 16" stroke="#FFDB59" stroke-width="2"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M20 10.6666L25.3333 16" stroke="#FFDB59" stroke-width="2"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                    </span>
-                            </button>
+                    </div>
+                    <div class="form-main-sub">
+                        <div class="input-main-form">
+                            <p class="name">密码:</p>
+                            <input type="password" name="password" placeholder="忘记/更改密码时不填">
                         </div>
-                    </form>
-                </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 overflow-hidden">
-                    <div class="get-touch-box-main">
-                        <div class="container3">
-                            <h1>
-                                <mark>每日一句</mark>
-                            </h1>
+                        <div class="input-main-form">
+                            <p class="name">确认密码:</p>
+                            <input type="password" name="passwordConfirm" placeholder="登录/忘记/更改密码时不填">
                         </div>
-                        >
-                        <p class="well">When do they work well, and when do they on us and finally, when do we
-                            actually need how can we avoid them.</p>
-                        <div class="contact-footer contact-footer2 container4">
-                            <img src="{{ url_for('static', filename = 'assets/images/phone_svg.svg') }}" alt="phone_svg">
-                            <h1>
-                                <mark>13132277902</mark>
-                            </h1>
-                        </div>
-                        <div class="contact-footer contact-footer2 container4">
-                            <img src="{{ url_for('static', filename = 'assets/images/email_svg.svg') }}" alt="email_svg">
-                            <h1>
-                                <mark>zhanghuiliu2020@163.com</mark>
-                            </h1>
-                        </div>
-                        <div class="contact-footer contact-footer2 container4">
-                            <img src="{{ url_for('static', filename = 'assets/images/location_svg.svg') }}" alt="location_svg">
-                            <h1>
-                                <mark>南山区 深圳, 中国</mark>
-                            </h1>
-                        </div>
+                    </div>
+                    <div class="form-submit-btn-main">
+                        <button type="submit" name="action" value="register" class="explore-btn hover-slide-right form-submit-btn" id="registerBtn">
+                        <span>注册
+                          <svg class="expo-arrow2" xmlns="http://www.w3.org/2000/svg" width="32"
+                               height="32" viewBox="0 0 32 32" fill="none">
+                            <g>
+                              <path d="M6.66669 16H25.3334" stroke="#FFDB59" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M20 21.3333L25.3333 16" stroke="#FFDB59" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M20 10.6666L25.3333 16" stroke="#FFDB59" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                          </svg>
+                        </span>
+                        </button>
+                        <button type="submit" name="action" value="login" class="explore-btn hover-slide-right form-submit-btn" id="loginBtn">
+                        <span>登录
+                          <svg class="expo-arrow2" xmlns="http://www.w3.org/2000/svg" width="32"
+                               height="32" viewBox="0 0 32 32" fill="none">
+                            <g>
+                              <path d="M6.66669 16H25.3334" stroke="#FFDB59" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M20 21.3333L25.3333 16" stroke="#FFDB59" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M20 10.6666L25.3333 16" stroke="#FFDB59" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                          </svg>
+                    </span>
+                        </button>
+                        <button type="submit" name="action" value="forget" class="explore-btn hover-slide-right form-submit-btn" id="forgetBtn">
+                        <span>更改/忘记密码
+                          <svg class="expo-arrow2" xmlns="http://www.w3.org/2000/svg" width="32"
+                               height="32" viewBox="0 0 32 32" fill="none">
+                            <g>
+                              <path d="M6.66669 16H25.3334" stroke="#FFDB59" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M20 21.3333L25.3333 16" stroke="#FFDB59" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M20 10.6666L25.3333 16" stroke="#FFDB59" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                          </svg>
+                        </span>
+                        </button>
+                    </div>
+                </form>
+                <div class="footer-box-right">
+                    <p class="mind-project">Any ideas in your mind?</p>
+                    <div class="view-work-circle btn btn1">
+                        CONTACT ME
+                    </div>
+                    <div>
+                        <p class="contact_time">09 : 00 AM - 12 : 30 PM</p>
+                        <p class="monday">Monday to Sunday</p>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
     <!-- ====================================== Conatct Section Two End===================================== -->
     <div class="header_full_sec" id="contact-ticker">
         <div class="position-relative">
-            <img class="client-bounce-img client-bounce-img1" src="{{ url_for('static', filename = 'assets/images/client-bounce-img1.jpg') }}"
+            <img alt="contact-logo" class="contact-logo client-bounce-img1" src="{{ url_for('static', filename = 'assets/images/girl1.jpg') }}"
                  alt="client-bounce-img1">
-            <img class="client-bounce-img client-bounce-img2" src="{{ url_for('static', filename = 'assets/images/client-bounce-img2.jpg') }}"
-                 alt="client-bounce-img2">
-            <img class="client-bounce-img client-bounce-img3" src="{{ url_for('static', filename = 'assets/images/client-bounce-img3.jpg') }}"
-                 alt="client-bounce-img3">
-            <img class="client-bounce-img client-bounce-img4" src="{{ url_for('static', filename = 'assets/images/client-bounce-img4.jpg') }}"
+            <img class="contact-logo client-bounce-img4" src="{{ url_for('static', filename = 'assets/images/girl2.jpg') }}"
                  alt="client-bounce-img4">
             <div class="logos">
                 <div class="logos-slide">
                     <div class="ticker__item">
                         zhanghuiliu2022@gmail.com
                     </div>
-                    <div class="ticker__item ticker__item_dark">
-                        13106962920
-                    </div>
                     <div class="ticker__item">
                         zhanghuiliu2020@163.com
-                    </div>
-                    <div class="ticker__item ticker__item_dark">
-                        13132277902
                     </div>
                     <div class="ticker__item">
                         zhanghuiliu2022@gmail.com
                     </div>
-                    <div class="ticker__item ticker__item_dark">
-                        13106962920
+                    <div class="ticker__item">
+                        zhanghuiliu2020@163.com
                     </div>
                 </div>
             </div>
@@ -242,6 +237,7 @@
     </div>
     <!-- ====================================== Progress Scroll Bottom To Top End ===================================== -->
 </div>
+
 <script src="{{ url_for('static', filename='assets/javascript/jquery.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/javascript/fancybox.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/javascript/gsap.js') }}"></script>
@@ -250,5 +246,11 @@
 <script src="{{ url_for('static', filename='assets/javascript/slick.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/javascript/bootstrap.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/javascript/script.js') }}"></script>
+<script src="https://www.google.com/recaptcha/api.js?render={{ siteKey }}" async defer></script>
+<script>
+    var siteKey = "{{ siteKey }}";
+</script>
+<script src="{{ url_for('static', filename='assets/javascript/recaptcha.js') }}"></script>
+
 </body>
 </html>
