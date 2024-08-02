@@ -1,0 +1,59 @@
+.error {
+    color: crimson;
+    background-color: #58151c;
+}
+.success{
+    color: lime;
+    background-color: #0a3622;
+}
+.flash-message {
+    /* 设置字体大小 */
+    font-size: 30px;
+    font-family: "DM Sans", sans-serif;
+    /* 居中对齐 */
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* 添加动画 */
+    -moz-animation: cssAnimation 4s forwards;
+    -webkit-animation: cssAnimation 4s forwards;
+    -o-animation: cssAnimation 4s forwards;
+    animation: cssAnimation 4s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    font-weight: 300;
+      z-index: 9999;
+}
+
+
+@keyframes cssAnimation {
+    0% {
+        top: 0%;
+    }
+    10% {
+        top: 15%;
+    }
+    90% {
+        top: 15%;
+    }
+    100% {
+        top: -20%;
+    }
+}
+
+@-webkit-keyframes cssAnimation {
+    0% {
+        top: 0%;
+    }
+    10% {
+        top: 15%;
+    }
+    90% {
+        top: 15%;
+    }
+    100% {
+        top: -20%;
+    }
+}
