@@ -1,0 +1,22 @@
+[2024-08-04|2024-08-04 01:55:46.471370|中国标准时间]	Database folder: "/../database/db/" found
+[2024-08-04|2024-08-04 01:55:47.320951|中国标准时间]	Running on http://127.0.0.1:5000
+[2024-08-04|2024-08-04 01:59:37.097511|中国标准时间]	Database folder: "/../database/db/" found
+[2024-08-04|2024-08-04 01:59:37.098497|中国标准时间]	Users database: "../database/db/users.db" found
+[2024-08-04|2024-08-04 01:59:37.102508|中国标准时间]	Table: "users" found in "../database/db/users.db"
+[2024-08-04|2024-08-04 01:59:37.103486|中国标准时间]	Posts database: "../database/db/posts.db" found
+[2024-08-04|2024-08-04 01:59:37.106486|中国标准时间]	Table: "posts" found in "../database/db/posts.db"
+[2024-08-04|2024-08-04 01:59:37.120006|中国标准时间]	Comments database: "../database/db/comments.db" found
+[2024-08-04|2024-08-04 01:59:37.123981|中国标准时间]	Table: "comments" found in "../database/db/comments.db"
+[2024-08-04|2024-08-04 01:59:37.124981|中国标准时间]	Running on http://127.0.0.1:5000
+[2024-08-04|2024-08-04 02:05:10.725468|中国标准时间]	Database folder: "/../database/db/" found
+[2024-08-04|2024-08-04 02:05:10.727472|中国标准时间]	Users database: "../database/db/users.db" found
+[2024-08-04|2024-08-04 02:05:10.730489|中国标准时间]	Table: "users" found in "../database/db/users.db"
+[2024-08-04|2024-08-04 02:05:10.731490|中国标准时间]	Posts database: "../database/db/posts.db" found
+[2024-08-04|2024-08-04 02:05:10.734509|中国标准时间]	Table: "posts" found in "../database/db/posts.db"
+[2024-08-04|2024-08-04 02:05:10.735504|中国标准时间]	Comments database: "../database/db/comments.db" found
+[2024-08-04|2024-08-04 02:05:10.738499|中国标准时间]	Table: "comments" found in "../database/db/comments.db"
+[2024-08-04|2024-08-04 02:05:10.739505|中国标准时间]	Running on http://127.0.0.1:5000
+[2024-08-04|2024-08-04 02:10:46.933153|中国标准时间]	Run time: 0:05:36 
+[2024-08-04|2024-08-04 02:10:46.934165|中国标准时间]	Shut down
+[2024-08-04|2024-08-04 02:10:47.002762|中国标准时间]	Run time: 0:21:18 
+[2024-08-04|2024-08-04 02:10:47.004774|中国标准时间]	Shut down
