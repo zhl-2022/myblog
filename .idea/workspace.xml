@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a01849ea-e4f3-4146-8fa7-843f7578f89b" name="更改" comment="fix constants.py">
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/aos.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/aos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/editor.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/editor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/error.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/error.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/fancybox.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/fancybox.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/flash.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/flash.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/github-markdown-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/github-markdown-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/github-markdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/github-markdown.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/magnific-popup.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/magnific-popup.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/media_query.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/media_query.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/recaptcha.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/recaptcha.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/slick.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/slick.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/css/swap.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/swap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/Frame 28.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/Frame 28.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/Polygon-arrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/Polygon-arrow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/bg2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/bg2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/bg3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/bg3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/blog-main-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/blog-main-img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/blog-uo-ux-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/blog-uo-ux-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/blog-uo-ux-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/blog-uo-ux-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/boy1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/boy1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/boy2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/boy2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/brand-logo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/brand-logo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/brand-logo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/brand-logo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/brand-logo3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/brand-logo3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/brand-logo4.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/brand-logo4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/brand-logo5.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/brand-logo5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/brand-logo6.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/brand-logo6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/brand-logo7.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/brand-logo7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/brand-logo8.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/brand-logo8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/client-bounce-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/client-bounce-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/client-bounce-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/client-bounce-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/client-bounce-img3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/client-bounce-img3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/client-bounce-img4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/client-bounce-img4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/clients-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/clients-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/clients-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/clients-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/clients-img3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/clients-img3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/clients-img4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/clients-img4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/creative-img1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/creative-img1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/creative-img2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/creative-img2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/creative-img3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/creative-img3.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/creative-img4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/creative-img4.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/diamond.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/diamond.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/digital-marketing-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/digital-marketing-img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/digital-tools-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/digital-tools-img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/effective-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/effective-img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/elementor.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/elementor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/email_svg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/email_svg.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/favicon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/favicon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/figma.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/figma.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/flower-hover-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/flower-hover-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/flower-hover-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/flower-hover-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/flower-hover-img3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/flower-hover-img3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/flower-hover-img4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/flower-hover-img4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/flower-hover-img5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/flower-hover-img5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/flower-hover-img6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/flower-hover-img6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/flower.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/flower.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/footer-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/footer-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/gallery-tab-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/gallery-tab-img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/girl-img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/girl-img2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/girl.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/girl.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/girl1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/girl1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/girl2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/girl2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/home-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/home-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/hover-img1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/hover-img1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/hover-img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/hover-img2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/hover-img3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/hover-img3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/hover-img4.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/hover-img4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/hover-img5.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/hover-img5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/hover-img6.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/hover-img6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/html-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/html-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/html-video-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/html-video-img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/icons8-close.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/icons8-close.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/icons8-facebook.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/icons8-facebook.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/icons8-instagram.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/icons8-instagram.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/icons8-linkedin.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/icons8-linkedin.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/icons8-twitter.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/icons8-twitter.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/icons8-whatsapp.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/icons8-whatsapp.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/illustrator.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/illustrator.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/image 2 (Traced).svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/image 2 (Traced).svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/js-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/js-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/location_svg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/location_svg.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/media-line-bottom.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/media-line-bottom.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/media-line-top.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/media-line-top.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/news-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/news-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/news-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/news-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/news-img3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/news-img3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/oig3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/oig3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/phone_svg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/phone_svg.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/photoshop.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/photoshop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/play.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/play.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/portfolio-main-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/portfolio-main-img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/product-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/product-img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/recent-post-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/recent-post-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/recent-post-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/recent-post-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/recent-post-img3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/recent-post-img3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/seo-implemnts.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/seo-implemnts.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/services-main-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/services-main-img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-blog-main-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-blog-main-img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-portfolio-over-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-portfolio-over-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-portfolio-over-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-portfolio-over-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-portfolio2-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-portfolio2-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-portfolio2-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-portfolio2-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-portfolio2-img3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-portfolio2-img3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-portfolio2-img4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-portfolio2-img4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-portfolio2-img5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-portfolio2-img5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-portfolio2-img6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-portfolio2-img6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-portfolio2-img7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-portfolio2-img7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-services-main-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-services-main-img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-services-project-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-services-project-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-services-project-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-services-project-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single-services-project-img3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single-services-project-img3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single_service2-img3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single_service2-img3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single_service2-img4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single_service2-img4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/single_services2-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/single_services2-img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/skills_hover-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/skills_hover-img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/slider-left-arrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/slider-left-arrow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/slider-right-arrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/slider-right-arrow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/sound-cloud-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/sound-cloud-img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/sound-cloud-logo-btn.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/sound-cloud-logo-btn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/star-circle-svg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/star-circle-svg.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/tab-content-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/tab-content-img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/tab-content-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/tab-content-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/testimonial_client_img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/testimonial_client_img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/testimonial_client_img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/testimonial_client_img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/testimonial_client_img3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/testimonial_client_img3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/testimonial_client_img4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/testimonial_client_img4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/transforming-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/transforming-img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/images/upload.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/upload.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/javascript/aos.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/javascript/aos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/javascript/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/javascript/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/javascript/editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/javascript/editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/javascript/fancybox.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/javascript/fancybox.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/javascript/gsap.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/javascript/gsap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/javascript/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/javascript/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/javascript/magnific-popup.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/javascript/magnific-popup.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/javascript/recaptcha.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/javascript/recaptcha.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/javascript/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/javascript/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/javascript/slick.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/javascript/slick.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/assets/javascript/timeStamp.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/javascript/timeStamp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/editor.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/templates/error/400.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error/400.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/templates/error/401.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error/401.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/templates/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/templates/error/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/templates/single_blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single_blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/templates/verifyUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/verifyUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/editor.md/lib/codemirror/addons.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/editor.md/lib/codemirror/addons.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/editor.md/lib/codemirror/modes.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/editor.md/lib/codemirror/modes.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/editor.md/lib/codemirror/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/editor.md/lib/codemirror/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="vercel_test" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Programs/Python/Python312/Lib/_pydatetime.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/api/routes/contact.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2j4S4JuRS0DTCH3xx1xgYn4UvQc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Flask 服务器.Flask (api/app.py).executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "vercel",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/learning/myblog",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "database.query.execution",
+    "ts.external.directory.path": "E:\\jetbra\\PyCharm 2024.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\learning\myblog" />
+      <recent name="E:\learning\myblog\api\static\assets\css" />
+      <recent name="E:\learning\myblog\api\templates" />
+      <recent name="E:\learning\myblog\api\static\assets\javascript" />
+      <recent name="E:\learning\myblog\api\utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\learning\myblog" />
+      <recent name="E:\learning\myblog\api\utils" />
+      <recent name="E:\learning\myblog\api" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="myblog" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="a01849ea-e4f3-4146-8fa7-843f7578f89b" name="更改" comment="" />
+      <created>1720644664422</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720644664422</updated>
+      <workItem from="1720644678308" duration="9000" />
+      <workItem from="1720753986168" duration="16006000" />
+      <workItem from="1720831460663" duration="15398000" />
+      <workItem from="1720871421232" duration="2428000" />
+      <workItem from="1720873959300" duration="90000" />
+      <workItem from="1720874074845" duration="721000" />
+      <workItem from="1720876834472" duration="866000" />
+      <workItem from="1720945518677" duration="10184000" />
+      <workItem from="1721048431437" duration="2778000" />
+      <workItem from="1721054974927" duration="6470000" />
+      <workItem from="1721169239742" duration="11022000" />
+      <workItem from="1721232285419" duration="8157000" />
+      <workItem from="1721552133099" duration="3971000" />
+      <workItem from="1721587906000" duration="11139000" />
+      <workItem from="1721638277767" duration="6130000" />
+      <workItem from="1721688086082" duration="1843000" />
+      <workItem from="1721805419409" duration="913000" />
+      <workItem from="1721833906702" duration="37084000" />
+      <workItem from="1721911307923" duration="125177000" />
+      <workItem from="1722228991696" duration="1128000" />
+      <workItem from="1722233681298" duration="43177000" />
+      <workItem from="1722398019698" duration="2614000" />
+      <workItem from="1722492160760" duration="15136000" />
+      <workItem from="1722515593627" duration="1180000" />
+      <workItem from="1722517328472" duration="33125000" />
+      <workItem from="1722563979078" duration="1373000" />
+      <workItem from="1722597169915" duration="6593000" />
+      <workItem from="1722606404098" duration="4110000" />
+      <workItem from="1722678293344" duration="11512000" />
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1720871767669</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720871767669</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix vercel.json">
+      <option name="closed" value="true" />
+      <created>1720948949504</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720948949504</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix vercel.json">
+      <option name="closed" value="true" />
+      <created>1720949884270</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720949884270</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix vercel.json">
+      <option name="closed" value="true" />
+      <created>1720950905654</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720950905654</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix vercel.json">
+      <option name="closed" value="true" />
+      <created>1720952229784</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720952229784</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix vercel.json">
+      <option name="closed" value="true" />
+      <created>1720952381351</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720952381351</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix vercel.json">
+      <option name="closed" value="true" />
+      <created>1720955603656</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720955603656</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add version 0.1">
+      <option name="closed" value="true" />
+      <created>1722562976849</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722562976849</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix version 0.1">
+      <option name="closed" value="true" />
+      <created>1722600645536</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1722600645536</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix version 0.1">
+      <option name="closed" value="true" />
+      <created>1722602942060</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1722602942060</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix version 0.1">
+      <option name="closed" value="true" />
+      <created>1722687744044</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1722687744044</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix log site">
+      <option name="closed" value="true" />
+      <created>1722688204997</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1722688204997</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix requirments">
+      <option name="closed" value="true" />
+      <created>1722688411793</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1722688411793</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix constants.py">
+      <option name="closed" value="true" />
+      <created>1722689111836</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1722689111836</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="first commit" />
+    <MESSAGE value="fix vercel.json" />
+    <MESSAGE value="add version 0.1" />
+    <MESSAGE value="fix version 0.1" />
+    <MESSAGE value="fix log site" />
+    <MESSAGE value="fix requirments" />
+    <MESSAGE value="fix constants.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix constants.py" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/myblog$test.coverage" NAME="test 覆盖结果" MODIFIED="1722501703308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/myblog$Flask__api_app_py_.coverage" NAME="Flask (api/app.py) 覆盖结果" MODIFIED="1721806234962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
