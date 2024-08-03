@@ -97,10 +97,10 @@ SMTP_SERVER = "smtp.qq.com"
 SMTP_PORT = 587
 
 # SMTP mail address
-SMTP_MAIL = os.getenv("SMTP_MAIL", "zhl")
+SMTP_MAIL = os.environ.get("SMTP_MAIL", "zhl")
 
 # SMTP mail password
-SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "zhl")
+SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "zhl")
 
 ### 默认管理员账户设置 ###
 
@@ -111,10 +111,10 @@ DEFAULT_ADMIN = True
 DEFAULT_ADMIN_USERNAME = "zhl"
 
 # 默认管理员电子邮件地址
-DEFAULT_ADMIN_EMAIL = os.getenv("DEFAULT_ADMIN_EMAIL", "zhl")
+DEFAULT_ADMIN_EMAIL = os.environ.get("DEFAULT_ADMIN_EMAIL", "zhl")
 
 # 默认管理员密码
-DEFAULT_ADMIN_PASSWORD = os.getenv("DEFAULT_ADMIN_PASSWORD", "zhl")
+DEFAULT_ADMIN_PASSWORD = os.environ.get("DEFAULT_ADMIN_PASSWORD", "zhl")
 
 # 管理员的默认起始积分
 DEFAULT_ADMIN_POINT = 0
@@ -124,9 +124,9 @@ DEFAULT_ADMIN_PROFILE_PICTURE = USER_PROFILE_PICTURE + DEFAULT_ADMIN_USERNAME + 
 
 ### RECAPTCHA设置 ###
 
-RECAPTCHA_SITE_KEY = os.getenv("RECAPTCHA_SITE_KEY", "6LeXYRgqAAAAAF4HUOV5nuaEvWO8e465mBb5PUas")  # (str)
+RECAPTCHA_SITE_KEY = os.environ.get("RECAPTCHA_SITE_KEY", "6LeXYRgqAAAAAF4HUOV5nuaEvWO8e465mBb5PUas")  # (str)
 
-RECAPTCHA_SECRET_KEY = os.getenv("RECAPTCHA_SECRET_KEY", "6LeXYRgqAAAAACLGvLsDa1ebYurJR4XXeeK_PS10")  # (str)
+RECAPTCHA_SECRET_KEY = os.environ.get("RECAPTCHA_SECRET_KEY", "6LeXYRgqAAAAACLGvLsDa1ebYurJR4XXeeK_PS10")  # (str)
 
 RECAPTCHA_VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify"  # (str)
 
