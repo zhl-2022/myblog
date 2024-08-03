@@ -14,11 +14,11 @@ Details:
 """
 from flask import Flask, g
 import sqlite3
-from .utils.log import Log
+from utils.log import Log
 from flask_wtf.csrf import CSRFError, CSRFProtect
-from .utils import notFoundErrorHandler, unauthorizedErrorHandler, csrfErrorHandler, afterRequestLogger, internalErrorHandler, currentDate
+from utils import notFoundErrorHandler, unauthorizedErrorHandler, csrfErrorHandler, afterRequestLogger, internalErrorHandler, currentDate
 from flask_caching import Cache
-from .constants import *
+from constants import *
 import requests
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime, timedelta

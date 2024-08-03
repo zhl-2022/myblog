@@ -1,7 +1,3 @@
-"""
-Importing necessary modules.
-"""
-
 from datetime import datetime, date
 from time import tzname
 
@@ -21,7 +17,6 @@ def currentDate():
     return date.today()
 
 
-# Function to get the current time
 def currentTime(seconds=True, microSeconds=False):
     """
     2024-07-28 22:04:00
@@ -43,11 +38,7 @@ def currentTime(seconds=True, microSeconds=False):
                         "%Y-%m-%d %H:%M:%S"
                     )  # Return current time with seconds.
 
-# Function to get the current timestamp
 def currentTimeStamp():
-    """
-    Returns the current time stamp as an integer.
-    """
     timeStamp = (
         datetime.now().timestamp()
     )  # Get current timestamp using datetime module.

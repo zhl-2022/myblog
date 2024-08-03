@@ -1,8 +1,8 @@
-from ..utils import *
+from utils import *
 from flask import render_template, flash, session, request, redirect, Blueprint
-from ..constants import *
-from . import verify_recaptcha, addPoints, verify_form
-from ..factory import get_db2, get_db1
+from constants import *
+from routes import verify_recaptcha, addPoints, verify_form
+from factory import get_db2, get_db1
 
 addBlueprint = Blueprint("add", __name__)
 

@@ -11,9 +11,9 @@ The posts variable is passed to the 404.html.jinja template as a list of diction
 The 404.html.jinja template displays the title and content of each post.
 """
 import base64
-from ..utils import Log
+from utils import Log
 from flask import render_template, Blueprint, redirect
-from . import get_db1
+from routes import get_db1
 blogBlueprint = Blueprint("blog", __name__)
 
 

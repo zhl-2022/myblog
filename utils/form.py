@@ -4,7 +4,6 @@ from wtforms import (
     Form,  # Importing the base class for forms
     FileField,  # Importing the field class for file uploads
     validators,  # Importing validators for form fields
-    SelectField,  # Importing the field class for dropdown/select inputs
     StringField,  # Importing the field class for string/text inputs
     TextAreaField,  # Importing the field class for multi-line text inputs
 )

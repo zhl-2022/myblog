@@ -6,7 +6,7 @@ User:       zhl
 Details:    错误和响应后的页面处理
 """
 
-from .log import Log
+from utils.log import Log
 from flask import render_template, request
 
 
