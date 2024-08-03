@@ -21,10 +21,10 @@ APP_PORT = 5000
 DEBUG_MODE = True
 
 # 模板文件夹的路径
-TEMPLATE_FOLDER = f"../templates"
+TEMPLATE_FOLDER = f"templates"
 
 # 静态文件夹的路径
-STATIC_FOLDER = f"../static"
+STATIC_FOLDER = f"static"
 
 # 用户头像
 USER_PROFILE_PICTURE = f"https://api.dicebear.com/9.x/bottts/svg?seed="
@@ -42,7 +42,7 @@ CUSTOM_LOGGER = True
 WERKZEUG_LOGGER = False
 
 # 日志文件夹的根路径
-LOG_FOLDER_ROOT = '../database/log/'
+LOG_FOLDER_ROOT = 'database/log/'
 
 # 日志文件的根路径
 LOG_FILE_ROOT = LOG_FOLDER_ROOT + "log.log"
@@ -77,7 +77,7 @@ BREAKER_TEXT = "\n"
 ### 数据库设置 ###
 
 # 数据库文件夹的根路径
-DB_FOLDER_ROOT = '../database/db/'
+DB_FOLDER_ROOT = 'database/db/'
 
 # 用户数据库的根路径
 DB_USERS_ROOT = DB_FOLDER_ROOT + "users.db"
