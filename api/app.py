@@ -37,7 +37,7 @@ commentsTable()
 match __name__:
     case "__main__":
         startTime = currentTimeStamp()
-        Log.app(f"Running on http://{APP_HOST}:{APP_PORT}")
+        # Log.app(f"Running on http://{APP_HOST}:{APP_PORT}")
         Log.success("App started")
         # app.run(debug=DEBUG_MODE, host=APP_HOST, port=APP_PORT)
         app.run()

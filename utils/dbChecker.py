@@ -16,6 +16,8 @@ from utils.log import Log
 from utils.time import currentTime
 from os.path import exists
 from passlib.hash import sha512_crypt as encryption
+import stat
+
 
 
 def dbFolder():
@@ -42,6 +44,7 @@ def usersTable():
             Log.danger(f'Users database: "{DB_USERS_ROOT}" not found')
             open(DB_USERS_ROOT, "x")
             Log.success(f'Users database: "{DB_USERS_ROOT}" created')
+    os.chmod(DB_USERS_ROOT, stat.S_IRUSR | stat.S_IWUSR)
     Log.sql(f"Connecting to '{DB_USERS_ROOT}' database")
     connection = sqlite3.connect(DB_USERS_ROOT)
     connection.set_trace_callback(Log.sql)
@@ -100,6 +103,8 @@ def postsTable():
             Log.danger(f'Posts database: "{DB_POSTS_ROOT}" not found')
             open(DB_POSTS_ROOT, "x")
             Log.success(f'Posts database: "{DB_POSTS_ROOT}" created')
+    os.chmod(DB_POSTS_ROOT, stat.S_IRUSR | stat.S_IWUSR)
+
     Log.sql(
         f"Connecting to '{DB_POSTS_ROOT}' database"
     )
@@ -140,6 +145,8 @@ def commentsTable():
             Log.danger(f'Comments database: "{DB_COMMENTS_ROOT}" not found')
             open(DB_COMMENTS_ROOT, "x")
             Log.success(f'Comments database: "{DB_COMMENTS_ROOT}" created')
+    os.chmod(DB_COMMENTS_ROOT, stat.S_IRUSR | stat.S_IWUSR)
+
     Log.sql(f"Connecting to '{DB_COMMENTS_ROOT}' database")
     connection = sqlite3.connect(DB_COMMENTS_ROOT)
     connection.set_trace_callback(Log.sql)

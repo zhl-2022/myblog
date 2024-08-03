@@ -1,12 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-File:       constants.py
-Time:       2024-07-17-08:50
-User:       zhl
-Details:    所有的应用设置
-"""
-
-import secrets, socket
+import secrets
+import os
 
 # Flask应用的名称
 
@@ -28,10 +21,10 @@ APP_PORT = 5000
 DEBUG_MODE = True
 
 # 模板文件夹的路径
-TEMPLATE_FOLDER = f"templates"
+TEMPLATE_FOLDER = f"../templates"
 
 # 静态文件夹的路径
-STATIC_FOLDER = f"static"
+STATIC_FOLDER = f"../static"
 
 # 用户头像
 USER_PROFILE_PICTURE = f"https://api.dicebear.com/9.x/bottts/svg?seed="
@@ -49,7 +42,7 @@ CUSTOM_LOGGER = True
 WERKZEUG_LOGGER = False
 
 # 日志文件夹的根路径
-LOG_FOLDER_ROOT = "/tmp/log/"
+LOG_FOLDER_ROOT = '../database/log/'
 
 # 日志文件的根路径
 LOG_FILE_ROOT = LOG_FOLDER_ROOT + "log.log"
@@ -84,7 +77,7 @@ BREAKER_TEXT = "\n"
 ### 数据库设置 ###
 
 # 数据库文件夹的根路径
-DB_FOLDER_ROOT = "/tmp/db/"
+DB_FOLDER_ROOT = '../database/db/'
 
 # 用户数据库的根路径
 DB_USERS_ROOT = DB_FOLDER_ROOT + "users.db"
@@ -104,10 +97,10 @@ SMTP_SERVER = "smtp.qq.com"
 SMTP_PORT = 587
 
 # SMTP mail address
-SMTP_MAIL = "zhl.blog@qq.com"
+SMTP_MAIL = os.getenv("SMTP_MAIL", "zhl")
 
 # SMTP mail password
-SMTP_PASSWORD = "wjcmndsjenyvddff"
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "zhl")
 
 ### 默认管理员账户设置 ###
 
@@ -118,10 +111,10 @@ DEFAULT_ADMIN = True
 DEFAULT_ADMIN_USERNAME = "zhl"
 
 # 默认管理员电子邮件地址
-DEFAULT_ADMIN_EMAIL = "zhanghuiliu2020@163.com"
+DEFAULT_ADMIN_EMAIL = os.getenv("DEFAULT_ADMIN_EMAIL", "zhl")
 
 # 默认管理员密码
-DEFAULT_ADMIN_PASSWORD = "zhl"
+DEFAULT_ADMIN_PASSWORD = os.getenv("DEFAULT_ADMIN_PASSWORD", "zhl")
 
 # 管理员的默认起始积分
 DEFAULT_ADMIN_POINT = 0
@@ -131,9 +124,9 @@ DEFAULT_ADMIN_PROFILE_PICTURE = USER_PROFILE_PICTURE + DEFAULT_ADMIN_USERNAME + 
 
 ### RECAPTCHA设置 ###
 
-RECAPTCHA_SITE_KEY = "6LeXYRgqAAAAAF4HUOV5nuaEvWO8e465mBb5PUas"  # (str)
+RECAPTCHA_SITE_KEY = os.getenv("RECAPTCHA_SITE_KEY", "6LeXYRgqAAAAAF4HUOV5nuaEvWO8e465mBb5PUas")  # (str)
 
-RECAPTCHA_SECRET_KEY = "6LeXYRgqAAAAACLGvLsDa1ebYurJR4XXeeK_PS10"  # (str)
+RECAPTCHA_SECRET_KEY = os.getenv("RECAPTCHA_SECRET_KEY", "6LeXYRgqAAAAACLGvLsDa1ebYurJR4XXeeK_PS10")  # (str)
 
 RECAPTCHA_VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify"  # (str)
 
