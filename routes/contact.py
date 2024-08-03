@@ -1,12 +1,12 @@
 import smtplib
 import ssl
-from ..utils import *
+from utils import *
 from flask import render_template, flash, session, request, redirect, Blueprint, url_for
 from passlib.hash import sha512_crypt as encryption
-from ..constants import *
+from constants import *
 from email.message import EmailMessage
-from . import verify_recaptcha, addPoints, verify_form
-from ..factory import get_db2
+from routes import verify_recaptcha, addPoints, verify_form
+from factory import get_db2
 
 contactBlueprint = Blueprint("contact", __name__)
 

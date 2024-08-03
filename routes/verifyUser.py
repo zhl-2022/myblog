@@ -1,15 +1,15 @@
 # Import necessary modules and functions
 from random import randint
 
-from ..constants import *
-from ..utils import *
+from constants import *
+from utils import *
 import ssl
 from flask import flash, redirect, render_template, request, session, Blueprint
 from email.message import EmailMessage
 import smtplib
 from passlib.hash import sha512_crypt as encryption
-from . import verify_recaptcha, verify_form
-from ..factory import get_db2
+from routes import verify_recaptcha, verify_form
+from factory import (get_db2)
 
 verifyUserBlueprint = Blueprint("verifyUser", __name__)
 

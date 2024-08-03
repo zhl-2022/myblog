@@ -24,10 +24,10 @@ Log.breaker: This method prints a breaker line (a text in BREAKER_TEXT constant)
 Note: The code is written in Python 3.12, and the docstrings follow the PEP 257 style guide.
 """
 
-from ..constants import *
+from constants import *
 from os import mkdir
 from os.path import exists
-from .time import *
+from utils.time import *
 import os
 match exists(LOG_FOLDER_ROOT):
     case False:

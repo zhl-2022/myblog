@@ -1,8 +1,8 @@
-from ..utils import Log
-from ..constants import *
+from utils import Log
+from constants import *
 from flask import abort, flash
 from requests import post as requestsPost
-from ..factory import get_db2, get_db1, get_db3
+from factory import get_db2, get_db1, get_db3
 import requests
 import json
 import time

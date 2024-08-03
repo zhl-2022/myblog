@@ -9,11 +9,11 @@ The database consists of three tables:
 This file contains functions to create the tables if they do not already exist, and to ensure that they have the correct structure.
 """
 
-from ..constants import *
+from constants import *
 import sqlite3
 from os import mkdir
-from .log import Log
-from .time import currentTime
+from utils.log import Log
+from utils.time import currentTime
 from os.path import exists
 from passlib.hash import sha512_crypt as encryption
 

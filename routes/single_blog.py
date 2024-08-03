@@ -1,13 +1,13 @@
 import base64
-from ..factory import get_db1, get_db3, get_db2
+from factory import get_db1, get_db3, get_db2
 
 import smtplib
 import ssl
-from ..utils import *
+from utils import *
 from flask import render_template, flash, session, request, redirect, Blueprint, url_for
-from ..constants import *
+from constants import *
 from email.message import EmailMessage
-from . import verify_recaptcha, verify_form, Delete, addPoints, markdown_to_html
+from routes import verify_recaptcha, verify_form, Delete, addPoints, markdown_to_html
 
 single_blogBlueprint = Blueprint("single_blog", __name__)
 
