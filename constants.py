@@ -28,10 +28,10 @@ APP_PORT = 5000
 DEBUG_MODE = True
 
 # 模板文件夹的路径
-TEMPLATE_FOLDER = f"templates"
+TEMPLATE_FOLDER = f"/api/templates"
 
 # 静态文件夹的路径
-STATIC_FOLDER = f"static"
+STATIC_FOLDER = f"/api/static"
 
 # 用户头像
 USER_PROFILE_PICTURE = f"https://api.dicebear.com/9.x/bottts/svg?seed="
@@ -84,7 +84,7 @@ BREAKER_TEXT = "\n"
 ### 数据库设置 ###
 
 # 数据库文件夹的根路径
-DB_FOLDER_ROOT = "db/"
+DB_FOLDER_ROOT = "/tmp/db/"
 
 # 用户数据库的根路径
 DB_USERS_ROOT = DB_FOLDER_ROOT + "users.db"
