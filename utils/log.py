@@ -29,9 +29,15 @@ from os import mkdir
 from os.path import exists
 from utils.time import *
 import os
-match exists(LOG_FOLDER_ROOT):
-    case False:
-        mkdir(LOG_FOLDER_ROOT)
+import stat
+if not exists(LOG_FOLDER_ROOT):
+    mkdir(LOG_FOLDER_ROOT)
+    os.chmod(LOG_DANGER_FILE_ROOT, stat.S_IRUSR | stat.S_IWUSR)
+    os.chmod(LOG_SUCCESS_FILE_ROOT, stat.S_IRUSR | stat.S_IWUSR)
+    os.chmod(LOG_WARNING_FILE_ROOT, stat.S_IRUSR | stat.S_IWUSR)
+    os.chmod(LOG_INFO_FILE_ROOT, stat.S_IRUSR | stat.S_IWUSR)
+    os.chmod(LOG_APP_FILE_ROOT, stat.S_IRUSR | stat.S_IWUSR)
+    os.chmod(LOG_SQL_FILE_ROOT, stat.S_IRUSR | stat.S_IWUSR)
 
 
 # Define a Log class
@@ -369,7 +375,8 @@ class Log:
                 logSQLFile.close()  # Close the sql log file
 
     # Define a method to print a breaker line
-    def breaker(self):
+    @classmethod
+    def breaker(cls):
         """
         Prints a breaker to the console and appends the line to the log file.
 
