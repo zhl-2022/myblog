@@ -1,0 +1,19 @@
+Index: api/app.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from .constants import APP_HOST, APP_PORT, DEBUG_MODE\r\nfrom .utils import *\r\nfrom datetime import timedelta\r\n\r\nfrom .routes.blog import blogBlueprint\r\nfrom .routes.contact import contactBlueprint\r\nfrom .routes.single_blog import single_blogBlueprint\r\nfrom .routes.verifyUser import verifyUserBlueprint\r\nfrom .routes.add import addBlueprint\r\nfrom .routes.edit import editBlueprint\r\n\r\nfrom .factory import create_app\r\n\r\napp = create_app()\r\napp.register_blueprint(blogBlueprint)\r\napp.register_blueprint(contactBlueprint)\r\napp.register_blueprint(verifyUserBlueprint)\r\napp.register_blueprint(single_blogBlueprint)\r\napp.register_blueprint(addBlueprint)\r\napp.register_blueprint(editBlueprint)\r\n\r\ndbFolder()\r\nusersTable()\r\npostsTable()\r\ncommentsTable()\r\n\r\n# match __name__:\r\n#     case \"__main__\":\r\n# startTime = currentTimeStamp()\r\n# Log.app(f\"Running on http://{APP_HOST}:{APP_PORT}\")\r\n# Log.success(\"App started\")\r\n# app.run(debug=DEBUG_MODE, host=APP_HOST, port=APP_PORT)\r\n# endTime = currentTimeStamp()\r\n# runTime = endTime - startTime\r\n# runTime = str(timedelta(seconds=runTime))\r\n# Log.app(f\"Run time: {runTime} \")\r\n# Log.app(\"Shut down\")\r\n# Log.warning(\"App shut down\")\r\n# Log.breaker()\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/api/app.py b/api/app.py
+--- a/api/app.py	(revision d8d6b9e55ba8ed26f5be6ef3b83a6e3d216e550e)
++++ b/api/app.py	(date 1722604001481)
+@@ -24,7 +24,7 @@
+ postsTable()
+ commentsTable()
+ 
+-# match __name__:
++# match __name__:'
+ #     case "__main__":
+ # startTime = currentTimeStamp()
+ # Log.app(f"Running on http://{APP_HOST}:{APP_PORT}")

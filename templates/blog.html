@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - ZHL</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename = 'assets/images/oig3.jpg') }} ">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/swap.css') }} ">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/fancybox.min.css') }} ">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/magnific-popup.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/aos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/slick.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/media_query.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/flash.css') }}"/>
+
+</head>
+<body>
+<div class="flash-message">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</div>
+<div class="site_contain">
+    <!-- ====================================== Cusrsor ===================================== -->
+    <div class="cursor"></div>
+    <!-- ====================================== Cursor End ===================================== -->
+    <!-- ====================================== Preloader ===================================== -->
+    <div class="page-loader">
+        <div class="loader"></div>
+        <div class="shadow"></div>
+    </div>
+    <!-- ====================================== Preloader End ===================================== -->
+    <!-- ====================================== Main Menu ===================================== -->
+    <header id="top-navbar" class="top-navbar">
+        <div class="container">
+            <div class="top-navbar_full">
+                <div class="back-btn container3">
+                    <a href="{{ url_for('blog.blog') }}">
+                        <h1>
+                            <mark>Blog</mark>
+                        </h1>
+                    </a>
+
+                </div>
+                <div class="hell">
+                    <ul class="top-navbar-title">
+                        <li class="menu-active"><a href="{{ url_for('blog.blog') }}">Blog</a></li>
+                        <li><a href="{{ url_for('add.add') }}">Add</a></li>
+                        <li><a href="{{ url_for('contact.contact') }}">Contact</a></li>
+                    </ul>
+                    <div class="input-main">
+                        <input type="text" name="text" placeholder="Search" autocomplete="off">
+                    </div>
+                    <img src="{{ getProfilePicture(session.get('userName'))  or url_for('static', filename = 'assets/images/oig3.jpg') }}" alt="user-logo" class="user-logo">
+                    <div class="outer-menu">
+                        <input class="checkbox-toggle" type="checkbox" name="checkbox">
+                        <div class="hamburger">
+                            <div></div>
+                        </div>
+                        <!-- ====================================== Side Menu ===================================== -->
+                        <div class="menu">
+                            <div>
+                                <nav>
+                                    <div class="container">
+                                        <div class="row sidemenu-main">
+                                            <div class="col-lg-2">
+                                                <div class="menu-text">
+                                                    <div class="side-menu-text">
+                                                        <p>Memu</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-7 side-menu-scroll">
+                                                <div class="heading2"><a href="{{ url_for('blog.blog') }}">Blog</a></div>
+                                                <div class="heading2"><a href="{{ url_for('add.add') }}">Add</a></div>
+                                                <div class="heading2"><a href="{{ url_for('contact.contact') }}">Contact</a></div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="cont-info">
+                                                    <div class="item">
+                                                        <p class="sub-title-address">地址</p>
+                                                        <p class="geek-alto"> 南山区 <br>深圳, 中国</p>
+                                                    </div>
+                                                    <div class="item">
+                                                        <p class="sub-title-address"> 联系 我 </p>
+                                                        <p>zhanghuiliu2020@163.com</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- ====================================== Side Menu End===================================== -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="single-blog2-section-main overflow-hidden" id="main">
+        <div class="container ">
+            <p class="main-text" data-aos="fade-down">{{ get_daily_quote.translation }}</p>
+            <h1 class="ui-ux JessicaBiogi blog2-main-text" data-aos="fade-down">ZHL Latest Blog</h1>
+            <p class="main-text-min" data-aos="fade-up">{{ get_daily_quote.date }} total {{ nums }} 篇</p>
+        </div>
+    </section>
+    <!-- ====================================== Blog Section One End ===================================== -->
+    <!-- ======================================= Blog Section Two ================================== -->
+    <section class="section-seven overflow-hidden">
+        <div class="container-xxl">
+            <div class="row">
+                {% for post in posts %}
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 new-img-box-main-blog new-img-box-main3"
+                         data-aos="{{ "fade-up" if loop.index is odd else "fade-down" }}">
+                        <img class="news-img" src="data:image/jpeg;base64,{{ post[4] }}" alt="news-img1"
+                             onclick="window.location.href='{{ url_for('single_blog.single_blog',postID=post[0]) }}';">
+                        <p class="date-dev">{{ post[7][:10] }} _ {{ post[9] }}</p>
+                        <h2 class="need-blog" onclick="window.location.href='{{ url_for('single_blog.single_blog',postID=post[0]) }}';">{{ post[1] }}</h2>
+                        <p class="explore-me read-more-btn">
+                            <a href="{{ url_for('single_blog.single_blog',postID=post[0]) }}">READ MORE
+                                <svg class="expo-arrow" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                     viewBox="0 0 32 32" fill="none">
+                                    <g>
+                                        <path d="M6.66669 16H25.3334" stroke="#FFDB59" stroke-width="2"
+                                              stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M20 21.3333L25.3333 16" stroke="#FFDB59" stroke-width="2"
+                                              stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M20 10.6666L25.3333 16" stroke="#FFDB59" stroke-width="2"
+                                              stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="load-more-btn-main" id="blog-load-more-btn">
+            <button class="explore-btn hover-slide-right load-more-btn">
+                    <span id="toggle">End!
+                        <svg class="expo-arrow2" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                             viewBox="0 0 32 32" fill="none">
+                            <g>
+                                <path d="M6.66669 16H25.3334" stroke="#FFDB59" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"></path>
+                                <path d="M20 21.3333L25.3333 16" stroke="#FFDB59" stroke-width="2"
+                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M20 10.6666L25.3333 16" stroke="#FFDB59" stroke-width="2"
+                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
+                    </span>
+            </button>
+        </div>
+    </section>
+    <!-- ====================================== Progress Scroll Bottom To Top ===================================== -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+        </svg>
+    </div>
+    <!-- ====================================== Progress Scroll Bottom To Top End ===================================== -->
+</div>
+<script src="{{ url_for('static', filename='assets/javascript/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/javascript/fancybox.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/javascript/gsap.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/javascript/magnific-popup.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/javascript/aos.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/javascript/slick.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/javascript/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/javascript/script.js') }}"></script>
+</body>
+</html>
