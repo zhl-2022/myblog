@@ -36,7 +36,7 @@ DAILY_QUOTES_URL = "https://apiv3.shanbay.com/weapps/dailyquote/quote"
 
 ### 日志设置 ###
 # 切换自定义日志功能
-CUSTOM_LOGGER = True
+CUSTOM_LOGGER = False
 
 # 切换werkzeug日志功能
 WERKZEUG_LOGGER = False

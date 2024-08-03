@@ -29,9 +29,9 @@ log = Log()
 print("templates/blog.html", os.path.abspath('templates/blog.html'))
 
 
-def check_and_delete_logs():
-    log_files = [LOG_FILE_ROOT, LOG_DANGER_FILE_ROOT, LOG_SUCCESS_FILE_ROOT, LOG_WARNING_FILE_ROOT, LOG_INFO_FILE_ROOT, LOG_APP_FILE_ROOT, LOG_SQL_FILE_ROOT]
-    log.check_and_delete_logs(log_files)
+# def check_and_delete_logs():
+#     log_files = [LOG_FILE_ROOT, LOG_DANGER_FILE_ROOT, LOG_SUCCESS_FILE_ROOT, LOG_WARNING_FILE_ROOT, LOG_INFO_FILE_ROOT, LOG_APP_FILE_ROOT, LOG_SQL_FILE_ROOT]
+#     log.check_and_delete_logs(log_files)
 
 
 def get_db1():
@@ -112,7 +112,7 @@ def getProfilePicture(userName):
 # 设置定时任务，每天更新一次
 scheduler = BackgroundScheduler()
 scheduler.add_job(func=get_daily_quote, trigger="cron", hour=0, minute=0)
-scheduler.add_job(func=check_and_delete_logs, trigger="cron", hour=0, minute=0)
+# scheduler.add_job(func=check_and_delete_logs, trigger="cron", hour=0, minute=0)
 scheduler.start()
 
 csrf = CSRFProtect(app)
