@@ -22,10 +22,10 @@ from constants import *
 import requests
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime, timedelta
-
+import os
 log = Log()
 
-
+print(os.path.abspath('templates/blog.html'))
 def check_and_delete_logs():
     log_files = [LOG_FILE_ROOT, LOG_DANGER_FILE_ROOT, LOG_SUCCESS_FILE_ROOT, LOG_WARNING_FILE_ROOT, LOG_INFO_FILE_ROOT, LOG_APP_FILE_ROOT, LOG_SQL_FILE_ROOT]
     log.check_and_delete_logs(log_files)
