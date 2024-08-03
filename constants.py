@@ -49,7 +49,7 @@ CUSTOM_LOGGER = True
 WERKZEUG_LOGGER = False
 
 # 日志文件夹的根路径
-LOG_FOLDER_ROOT = "log/"
+LOG_FOLDER_ROOT = "/tmp/log/"
 
 # 日志文件的根路径
 LOG_FILE_ROOT = LOG_FOLDER_ROOT + "log.log"
