@@ -28,10 +28,10 @@ APP_PORT = 5000
 DEBUG_MODE = True
 
 # 模板文件夹的路径
-TEMPLATE_FOLDER = f"../templates"
+TEMPLATE_FOLDER = f"templates"
 
 # 静态文件夹的路径
-STATIC_FOLDER = f"../static"
+STATIC_FOLDER = f"static"
 
 # 用户头像
 USER_PROFILE_PICTURE = f"https://api.dicebear.com/9.x/bottts/svg?seed="
