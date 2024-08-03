@@ -39,7 +39,8 @@ match __name__:
         startTime = currentTimeStamp()
         Log.app(f"Running on http://{APP_HOST}:{APP_PORT}")
         Log.success("App started")
-        app.run(debug=DEBUG_MODE, host=APP_HOST, port=APP_PORT)
+        # app.run(debug=DEBUG_MODE, host=APP_HOST, port=APP_PORT)
+        app.run()
         endTime = currentTimeStamp()
         runTime = endTime - startTime
         runTime = str(timedelta(seconds=runTime))
