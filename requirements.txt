@@ -7,3 +7,4 @@ pipenv==2024.0.1
 WTForms==3.1.2
 gunicorn
 apscheduler
+flask_caching
