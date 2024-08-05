@@ -29,7 +29,8 @@ RECAPTCHA_SITE_KEY = os.environ.get("RECAPTCHA_SITE_KEY", "6LeXYRgqAAAAAF4HUOV5n
 
 RECAPTCHA_SECRET_KEY = os.environ.get("RECAPTCHA_SECRET_KEY", "6LeXYRgqAAAAACLGvLsDa1ebYurJR4XXeeK_PS10")  # (str)
 
-RECAPTCHA_VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify"  # (str)
+RECAPTCHA_VERIFY_URL = "https://recaptcha.net/recaptcha/api/siteverify"
+# https://www.google.com/recaptcha/api/siteverify"  # (str)
 
 # 切换不同操作的reCAPTCHA验证
 RECAPTCHA_LOGIN = True
