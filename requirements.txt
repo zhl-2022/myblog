@@ -9,4 +9,3 @@ gunicorn
 apscheduler
 flask_caching
 pymongo[srv]
-Flask-SQLAlchemy
