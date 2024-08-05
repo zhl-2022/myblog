@@ -1,52 +1,19 @@
 import secrets
 import os
-
-# Flask应用的名称
-
 APP_NAME = "myblog"
-
-# Flask应用的版本
 APP_VERSION = "1.0.0"
-
-# 应用文件的根路径
 APP_ROOT_PATH = "."
-
-# 模板文件夹的路径
 TEMPLATE_FOLDER = f"templates"
-
-# 静态文件夹的路径
 STATIC_FOLDER = f"static"
-
-# 用户头像
 USER_PROFILE_PICTURE = f"https://api.dicebear.com/9.x/bottts/svg?seed="
-
-# 头像大小
 RADIUS_PROFILE_PICTURE = "&radius=10"
-
 DAILY_QUOTES_URL = "https://apiv3.shanbay.com/weapps/dailyquote/quote"
-
-### 日志设置 ###
-# 切换自定义日志功能
 CUSTOM_LOGGER = False
-
-# 切换werkzeug日志功能
 WERKZEUG_LOGGER = False
-
-# Flask会话的秘密密钥
 APP_SECRET_KEY = secrets.token_urlsafe(32)
-
-# 切换Flask应用的永久会话
 SESSION_PERMANENT = True
-
-# 日志文件中使用的分隔符文本
 BREAKER_TEXT = "\n"
-
-### SMTP邮件设置 ###
-
-# SMTP服务器地址
 SMTP_SERVER = "smtp.qq.com"
-
-# SMTP server port
 SMTP_PORT = 587
 
 # SMTP mail address
