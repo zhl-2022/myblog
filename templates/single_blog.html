@@ -56,9 +56,9 @@
                         <li><a href="{{ url_for('add.add') }}">Add</a></li>
                         <li><a href="{{ url_for('contact.contact') }}">Contact</a></li>
                     </ul>
-                    <div class="input-main">
-                        <input type="text" name="text" placeholder="Search" autocomplete="off">
-                    </div>
+{#                    <div class="input-main">#}
+{#                        <input type="text" name="text" placeholder="Search" autocomplete="off">#}
+{#                    </div>#}
                     <img src="{{ getProfilePicture(session.get('userName'))  or url_for('static', filename = 'assets/images/oig3.jpg') }}" alt="user-logo" class="user-logo">
                     <div class="outer-menu">
                         <input class="checkbox-toggle" type="checkbox" name="checkbox">
@@ -129,8 +129,8 @@
                         <p class="other-services">Categories</p>
                         {% for i, category in enumerate(categories) %}
                             <div class="categories-details-main {% if i == 0 %}pt-0{% elif i == loop.last %}border-0{% endif %}">
-                                <p class="dev-blog-text">{{ category[0] }}</p>
-                                <p class="total-blogs">({{ category[1] }})</p>
+                                <p class="dev-blog-text">{{ category["_id"] }}</p>
+                                <p class="total-blogs">({{ category["count"] }})</p>
                             </div>
                         {% endfor %}
                     </div>
@@ -138,13 +138,13 @@
                         <p class="other-services">Recent Posts</p>
                         {% for recent_post in recent_posts %}
 
-                            <a href='{{ url_for('single_blog.single_blog',postID=recent_post[0]) }}'>
+                            <a href='{{ url_for('single_blog.single_blog',postID=recent_post["_id"]) }}'>
                                 <div class="recent-posts-main">
-                                    <img class="news-img-recent" src="data:image/jpeg;base64,{{ recent_post[2] }}"
+                                    <img class="news-img-recent" src="data:image/jpeg;base64,{{ recent_post["banner"] }}"
                                          alt="news-img-recent1">
                                     <div>
-                                        <p class="implements">{{ recent_post[1] }}</p>
-                                        <p class="implements-date">{{ recent_post[3][:10] }} _ {{ recent_post[4] }}</p>
+                                        <p class="implements">{{ recent_post["title"] }}</p>
+                                        <p class="implements-date">{{ recent_post["lastEditTimeStamp"] }} _ {{ recent_post["category"] }} _ {{ recent_post["author"] }}</p>
                                     </div>
                                 </div>
                             </a>
@@ -264,16 +264,16 @@
                     <p class="blog-comments" data-aos="fade-up">Comments</p>
                     {% for comment in comments %}
                         <div class="blog-comments-main" data-aos="fade-up">
-                            <img alt="user-logo" class="user-logo" src="{{ getProfilePicture(comment[3]) }}">
+                            <img alt="user-logo" class="user-logo" src="{{ getProfilePicture(comment["user"]) }}">
                             <div>
                                 <div class="blog-name-date-group">
-                                    <p class="blog-replay-client">{{ comment[3] }}</p>
-                                    <p class="blog-replay-date">{{ comment[4] }}</p>
-                                    {% if comment[5] %}
-                                    <p class="blog-replay-date">回复: {{ comment[5] }}</p>
+                                    <p class="blog-replay-client">{{ comment["user"] }}</p>
+                                    <p class="blog-replay-date">{{ comment["timeStamp"] }}</p>
+                                    {% if comment["parent_id"] %}
+                                    <p class="blog-replay-date">回复: {{ comment["parent_user"] }}</p>
                                     {% endif %}
                                 </div>
-                                <p class="blog-replay-message">{{ comment[2] }}</p>
+                                <p class="blog-replay-message">{{ comment["comment"] }}</p>
                                 <p class="blog-replay-text"><a href="#" class="reply-link" data-comment-id="{{ comment[0] }}">Reply</a></p>
                             </div>
                         </div>

@@ -56,9 +56,9 @@
                         <li><a href="{{ url_for('add.add') }}">Add</a></li>
                         <li><a href="{{ url_for('contact.contact') }}">Contact</a></li>
                     </ul>
-                    <div class="input-main">
-                        <input type="text" name="text" placeholder="Search" autocomplete="off">
-                    </div>
+{#                    <div class="input-main">#}
+{#                        <input type="text" name="text" placeholder="Search" autocomplete="off">#}
+{#                    </div>#}
                     <img src="{{ getProfilePicture(session.get('userName'))  or url_for('static', filename = 'assets/images/oig3.jpg') }}" alt="user-logo" class="user-logo">
                     <div class="outer-menu">
                         <input class="checkbox-toggle" type="checkbox" name="checkbox">
@@ -121,12 +121,12 @@
                 {% for post in posts %}
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 new-img-box-main-blog new-img-box-main3"
                          data-aos="{{ "fade-up" if loop.index is odd else "fade-down" }}">
-                        <img class="news-img" src="data:image/jpeg;base64,{{ post[4] }}" alt="news-img1"
-                             onclick="window.location.href='{{ url_for('single_blog.single_blog',postID=post[0]) }}';">
-                        <p class="date-dev">{{ post[7][:10] }} _ {{ post[9] }}</p>
-                        <h2 class="need-blog" onclick="window.location.href='{{ url_for('single_blog.single_blog',postID=post[0]) }}';">{{ post[1] }}</h2>
+                        <img class="news-img" src="data:image/jpeg;base64,{{ post["banner"] }}" alt="news-img1"
+                             onclick="window.location.href='{{ url_for('single_blog.single_blog',postID=post["_id"]) }}';">
+                        <p class="date-dev">{{ post["timeStamp"] }} _ {{ post["title"] }}</p>
+                        <h2 class="need-blog" onclick="window.location.href='{{ url_for('single_blog.single_blog',postID=post["_id"]) }}';">{{ post["title"] }}</h2>
                         <p class="explore-me read-more-btn">
-                            <a href="{{ url_for('single_blog.single_blog',postID=post[0]) }}">READ MORE
+                            <a href="{{ url_for('single_blog.single_blog',postID=post["_id"]) }}">READ MORE
                                 <svg class="expo-arrow" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                                      viewBox="0 0 32 32" fill="none">
                                     <g>

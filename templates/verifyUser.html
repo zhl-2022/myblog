@@ -55,9 +55,9 @@
                         <li><a href="{{ url_for('add.add') }}">Add</a></li>
                         <li class="menu-active"><a href="{{ url_for('contact.contact') }}">Contact</a></li>
                     </ul>
-                    <div class="input-main">
-                        <input type="text" name="text" placeholder="Search" autocomplete="off">
-                    </div>
+{#                    <div class="input-main">#}
+{#                        <input type="text" name="text" placeholder="Search" autocomplete="off">#}
+{#                    </div>#}
                     <img src="{{ getProfilePicture(session.get('userName'))  or url_for('static', filename = 'assets/images/oig3.jpg') }}" alt="user-logo" class="user-logo">
                     <div class="outer-menu">
                         <input class="checkbox-toggle" type="checkbox" name="checkbox">

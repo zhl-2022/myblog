@@ -8,3 +8,5 @@ WTForms==3.1.2
 gunicorn
 apscheduler
 flask_caching
+pymongo[srv]
+Flask-SQLAlchemy

@@ -1,15 +1,13 @@
-# Import necessary modules and functions
 from random import randint
 
 from constants import *
 from utils import *
 import ssl
-from flask import flash, redirect, render_template, request, session, Blueprint
+from flask import flash, redirect, render_template, request, session, Blueprint,current_app
 from email.message import EmailMessage
 import smtplib
 from passlib.hash import sha512_crypt as encryption
 from routes import verify_recaptcha, verify_form
-from factory import (get_db2)
 
 verifyUserBlueprint = Blueprint("verifyUser", __name__)
 
@@ -20,15 +18,17 @@ def verifyUser(codeSent):
         verify_recaptcha(request.form.get("g-recaptcha-response"))
         if "email" in session:
             email = session["email"]
-            db_user = get_db2()
-            cursor_user = db_user.cursor()
-            cursor_user.execute("""select isVerified,userName,password  from users where email = ? """, (email,))
-            isVerified, userName, oldPassword = cursor_user.fetchone()
-            if not userName:
+            users_collection = current_app.mongo_db['users']
+            user = users_collection.find_one({"email": email}, {"isVerified": 1, "userName": 1, "password": 1})
+            if user:
+                isVerified = user["isVerified"]
+                userName = user["userName"]
+                oldPassword = user["password"]
+            else:
                 flash("User not found. Please change another email", "error")
                 return redirect("/contact")
             if codeSent[0] == "1":  # 注册
-                if isVerified == "True":
+                if isVerified:
                     flash("Your account has been verified before", "success")
                     return redirect("/contact")
                 else:
@@ -37,11 +37,10 @@ def verifyUser(codeSent):
                         verify_form(VerifyUserForm(request.form))
                         code = request.form["code"]
                         if code == verificationCode:
-                            cursor_user.execute("""update users set isVerified = "True" where email= ? """, (email,))
-                            db_user.commit()
-                            session["isVerified"] = "True"
+                            users_collection.update_one({"email": email}, {"$set": {"isVerified": True}})
+                            session["isVerified"] = True
                             flash("Your account has been verified.", "success")
-                            return redirect("/contact")
+                            return redirect("/")
                         else:
                             flash("Wrong code.", "error")
                             return redirect("/verifyUser/codesent=10")
@@ -97,7 +96,6 @@ def verifyUser(codeSent):
                         try:
                             server.send_message(message)
                         except Exception as e:
-                            Log.danger(f"Incorrect email {e}")
                             flash(f"Incorrect email {e}", "error")
                             return redirect("/contact")
                         server.quit()
@@ -121,8 +119,7 @@ def verifyUser(codeSent):
                         return redirect("/verifyUser/codesent=20")
                     else:
                         password = encryption.hash(password)
-                        cursor_user.execute("""update users set password = ? where email = ? """, (password, email))
-                        db_user.commit()
+                        users_collection.update_one({"email": email}, {"$set": {"password": password}})
                         flash("You need to login with the new password.", "success")
                         return redirect("/contact")
                 elif codeSent[1] == "0":
@@ -162,7 +159,6 @@ def verifyUser(codeSent):
                     try:
                         server.send_message(message)
                     except Exception as e:
-                        Log.danger(f"Incorrect email {e}")
                         flash(f"Incorrect email {e}", "error")
                         return redirect("/contact")
                     server.quit()

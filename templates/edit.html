@@ -66,9 +66,9 @@
                         <li class="menu-active"><a href="{{ url_for('add.add') }}">Add</a></li>
                         <li><a href="{{ url_for('contact.contact') }}">Contact</a></li>
                     </ul>
-                    <div class="input-main">
-                        <input type="text" name="text" placeholder="Search" autocomplete="off">
-                    </div>
+                    {#                    <div class="input-main">#}
+                    {#                        <input type="text" name="text" placeholder="Search" autocomplete="off">#}
+                    {#                    </div>#}
                     <img src="{{ getProfilePicture(session.get('userName'))  or url_for('static', filename = 'assets/images/oig3.jpg') }}" alt="user-logo" class="user-logo">
                     <div class="outer-menu">
                         <input class="checkbox-toggle" type="checkbox" name="checkbox">
@@ -136,7 +136,7 @@
                         </div>
                         <div class="input-main-form-post">
                             <p class="name">标记:</p>
-                            <input type="text" name="postTags" placeholder={{ tag }}>
+                            <input type="text" name="postTags" placeholder={{ tags }}>
                         </div>
                         <div class="input-main-form-post">
                             <p class="name">配图:</p>
@@ -163,9 +163,11 @@
                     </form>
                 </div>
                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 new-img-box-main-blog new-img-box-main3" data-aos="fade-up">
-                    <img class="news-img" src="data:image/jpeg;base64,{{ image }}" alt="news-img1">
+                    <img class="soluta-img" src="data:image/jpeg;base64,{{ image }}"
+                         alt="single-blog-main-img" data-aos="fade-right">
                 </div>
-            </div>}
+            </div>
+            }
         </div>
     </section>
     <section class="section-two-my-services">

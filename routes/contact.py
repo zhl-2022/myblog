@@ -1,13 +1,12 @@
 import smtplib
 import ssl
 from utils import *
-from flask import render_template, flash, session, request, redirect, Blueprint, url_for
+from flask import render_template, flash, session, request, redirect, Blueprint, url_for, current_app
 from passlib.hash import sha512_crypt as encryption
 from constants import *
 from email.message import EmailMessage
-from routes import verify_recaptcha, addPoints, verify_form
-from factory import get_db2
-
+from routes import verify_recaptcha, verify_form
+from models import User
 contactBlueprint = Blueprint("contact", __name__)
 
 
@@ -16,29 +15,23 @@ def contact():
     if request.method == "POST":
         verify_recaptcha(request.form.get("g-recaptcha-response"))
         action = request.form.get('action')
-        db_user = get_db2()
-        cursor_user = db_user.cursor()
         if action == 'login':
             verify_form(LoginForm(request.form))
             email = request.form["email"]
             password = request.form["password"]
-            cursor_user.execute("""select * from users where email = ? """, (email,))
-            user = cursor_user.fetchone()
+            users_collection = current_app.mongo_db['users']
+            user = users_collection.find_one({"email": email})
             if not user:
                 flash("email not found.", "error")
-            elif user[1] == session.get("userName"):
+            elif user["userName"] == session.get("userName"):
                 flash("You are already logged in!", "success")
-                return redirect("/contact")
             else:
-                if encryption.verify(password, user[3]):
-                    session["userName"] = user[1]
-                    session["email"] = user[2]
-                    session["role"] = user[5]
-                    session["isVerified"] = user[8]
-                    addPoints(1, user[1])
-                    Log.success(f'USER: "{user[1]}" LOGGED IN')
-                    flash(f"Welcome, {user[1]}!", "success")
-                    return redirect("/contact")
+                if encryption.verify(password, user["password"]):
+                    session["userName"] = user["userName"]
+                    session["email"] = user["email"]
+                    session["isVerified"] = user["isVerified"]
+                    flash(f"Welcome, {user['userName']}!", "success")
+                    return redirect("/")
                 else:
                     flash("Wrong password.", "error")
         elif action == 'register':
@@ -48,15 +41,18 @@ def contact():
             password = request.form["password"]
             passwordConfirm = request.form["passwordConfirm"]
             userName = userName.replace(" ", "")
-            cursor_user.execute("select userName from users")
-            users = str(cursor_user.fetchall())
-            cursor_user.execute("select email from users")
-            mails = str(cursor_user.fetchall())
-            if userName in users and email in mails:
+            # 获取MongoDB集合
+            users_collection = current_app.mongo_db['users']
+            # 查询所有用户名和电子邮件
+            users = users_collection.find({}, {"userName": 1, "email": 1})
+            # 将查询结果转换为列表
+            usernames = [user["userName"] for user in users]
+            emails = [user["email"] for user in users]
+            if userName in usernames and email in emails:
                 flash("This username and email is unavailable.", "error")
-            elif email in mails:
+            elif email in emails:
                 flash("This email is unavailable.", "error")
-            elif userName in users:
+            elif userName in usernames:
                 flash("This username is unavailable.", "error")
             else:
                 if passwordConfirm != password:
@@ -66,14 +62,13 @@ def contact():
                         flash("Username does not fit ascii charecters.", "error")
                     else:
                         password = encryption.hash(password)
-                        cursor_user.execute(
-                            f"""insert into users(userName,email,password,profilePicture,role,points,timeStamp,isVerified) values(?, ?, ?, ?, ?, ?, ?, ?)""",
-                            (userName, email, password, f"{USER_PROFILE_PICTURE}{userName}{RADIUS_PROFILE_PICTURE}", "admin", 0, currentTime(), "False"))
-                        db_user.commit()
+                        # 获取MongoDB集合
+                        # 插入新用户
+                        new_user = User(userName, email, password)
+                        users_collection.insert_one(new_user.todict())
                         session["userName"] = userName
                         session["email"] = email
-                        session["role"] = "admin"
-                        session["isVerified"] = "False"
+                        session["isVerified"] = False
                         context = (ssl.create_default_context())
                         server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
                         server.ehlo()
@@ -109,18 +104,15 @@ def contact():
                         try:
                             server.send_message(mail)
                         except Exception as e:
-                            Log.danger(f"Incorrect email {e}")
                             flash(f"Incorrect email {e}", "error")
                             return redirect("/contact")
                         server.quit()
-                        addPoints(1, userName)
-                        Log.success(f'User: "{userName}" logged in')
                         flash(f"Welcome, {userName}!", "success")
                         return redirect(url_for('verifyUser.verifyUser', codeSent='10'))
         elif action == 'forget':
             verify_form(ForgetForm(request.form))
-            cursor_user.execute("""select * from users where email = ? """, (request.form["email"],))
-            user = cursor_user.fetchone()
+            users_collection = current_app.mongo_db['users']
+            user = users_collection.find_one({"email": request.form["email"]})
             if not user:
                 flash("email not found.", "error")
                 return redirect("/contact")

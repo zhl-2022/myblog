@@ -11,15 +11,6 @@ APP_VERSION = "1.0.0"
 # 应用文件的根路径
 APP_ROOT_PATH = "."
 
-# Flask应用的主机名或IP地址
-APP_HOST = '127.0.0.1'  # (str)
-
-# Flask应用的端口号
-APP_PORT = 5000
-
-# 切换Flask应用的调试模式
-DEBUG_MODE = True
-
 # 模板文件夹的路径
 TEMPLATE_FOLDER = f"templates"
 
@@ -41,30 +32,6 @@ CUSTOM_LOGGER = False
 # 切换werkzeug日志功能
 WERKZEUG_LOGGER = False
 
-# 日志文件夹的根路径
-LOG_FOLDER_ROOT = 'database/log/'
-
-# 日志文件的根路径
-LOG_FILE_ROOT = LOG_FOLDER_ROOT + "log.log"
-
-# 危险日志文件的根路径
-LOG_DANGER_FILE_ROOT = LOG_FOLDER_ROOT + "logDanger.log"
-
-# 成功日志文件的根路径
-LOG_SUCCESS_FILE_ROOT = LOG_FOLDER_ROOT + "logSuccess.log"
-
-# 警告日志文件的根路径
-LOG_WARNING_FILE_ROOT = LOG_FOLDER_ROOT + "logWarning.log"
-
-# 信息日志文件的根路径
-LOG_INFO_FILE_ROOT = LOG_FOLDER_ROOT + "logInfo.log"
-
-# 应用日志文件的根路径
-LOG_APP_FILE_ROOT = LOG_FOLDER_ROOT + "logApp.log"
-
-# SQL日志文件的根路径
-LOG_SQL_FILE_ROOT = LOG_FOLDER_ROOT + "logSQL.log"
-
 # Flask会话的秘密密钥
 APP_SECRET_KEY = secrets.token_urlsafe(32)
 
@@ -73,20 +40,6 @@ SESSION_PERMANENT = True
 
 # 日志文件中使用的分隔符文本
 BREAKER_TEXT = "\n"
-
-### 数据库设置 ###
-
-# 数据库文件夹的根路径
-DB_FOLDER_ROOT = 'database/db/'
-
-# 用户数据库的根路径
-DB_USERS_ROOT = DB_FOLDER_ROOT + "users.db"
-
-# 帖子数据库的根路径
-DB_POSTS_ROOT = DB_FOLDER_ROOT + "posts.db"
-
-# 评论数据库的根路径
-DB_COMMENTS_ROOT = DB_FOLDER_ROOT + "comments.db"
 
 ### SMTP邮件设置 ###
 
@@ -97,30 +50,11 @@ SMTP_SERVER = "smtp.qq.com"
 SMTP_PORT = 587
 
 # SMTP mail address
-SMTP_MAIL = os.environ.get("SMTP_MAIL", "zhl")
+SMTP_MAIL = os.environ.get("SMTP_MAIL", "")
 
 # SMTP mail password
-SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "zhl")
+SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "")
 
-### 默认管理员账户设置 ###
-
-# 切换创建默认管理员账户
-DEFAULT_ADMIN = True
-
-# 默认管理员用户名
-DEFAULT_ADMIN_USERNAME = "zhl"
-
-# 默认管理员电子邮件地址
-DEFAULT_ADMIN_EMAIL = os.environ.get("DEFAULT_ADMIN_EMAIL", "zhl")
-
-# 默认管理员密码
-DEFAULT_ADMIN_PASSWORD = os.environ.get("DEFAULT_ADMIN_PASSWORD", "zhl")
-
-# 管理员的默认起始积分
-DEFAULT_ADMIN_POINT = 0
-
-# 默认管理员的个人资料图片URL
-DEFAULT_ADMIN_PROFILE_PICTURE = USER_PROFILE_PICTURE + DEFAULT_ADMIN_USERNAME + RADIUS_PROFILE_PICTURE
 
 ### RECAPTCHA设置 ###
 

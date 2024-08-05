@@ -14,7 +14,6 @@ from utils.form import *
 from utils.time import currentDate, currentTime, currentTimeStamp, currentTimeZone
 
 # 用于记录日志消息。
-from utils.log import Log
+# from utils.log import Log
 
 
-from utils.dbChecker import dbFolder, usersTable, postsTable, commentsTable
