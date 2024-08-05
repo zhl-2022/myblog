@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a01849ea-e4f3-4146-8fa7-843f7578f89b" name="更改" comment="fix test">
+    <list default="true" id="a01849ea-e4f3-4146-8fa7-843f7578f89b" name="更改" comment="fix constants.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/single_blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single_blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/verifyUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/verifyUser.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +203,7 @@
       <workItem from="1722606404098" duration="4110000" />
       <workItem from="1722678293344" duration="11512000" />
       <workItem from="1722723427221" duration="1851000" />
-      <workItem from="1722760433676" duration="45612000" />
+      <workItem from="1722760433676" duration="46650000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -350,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722823946490</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fix constants.py">
+      <option name="closed" value="true" />
+      <created>1722827200787</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1722827200787</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,10 +417,10 @@
     <MESSAGE value="fix version 0.1" />
     <MESSAGE value="fix log site" />
     <MESSAGE value="fix requirments" />
-    <MESSAGE value="fix constants.py" />
     <MESSAGE value="fix editormd.css" />
     <MESSAGE value="fix test" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix test" />
+    <MESSAGE value="fix constants.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix constants.py" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/myblog$test.coverage" NAME="test 覆盖结果" MODIFIED="1722807358488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
