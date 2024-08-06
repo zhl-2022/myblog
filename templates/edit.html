@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/media_query.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/flash.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='editor.md/css/editormd.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/editormd.min.css') }}">
     <style>
         body {
             background-image: url("{{ url_for('static', filename='assets/images/2.jpg') }}");
@@ -283,7 +283,7 @@
 <script>
     var siteKey = "{{ siteKey }}";
 </script>
-<script src="{{ url_for('static', filename='editor.md/editormd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/javascript/editormd.min.js') }}"></script>
 <script type="text/javascript">
     var editor;
     $(function () {
@@ -291,7 +291,7 @@
             width: "85%",
             emoji: true,
             height: 2000,
-            path: "/static/editor.md/lib/"
+            path: "/static/assets/lib/"
         });
     });
 </script>

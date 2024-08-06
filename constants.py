@@ -15,20 +15,10 @@ SESSION_PERMANENT = True
 BREAKER_TEXT = "\n"
 SMTP_SERVER = "smtp.qq.com"
 SMTP_PORT = 587
-
-# SMTP mail address
 SMTP_MAIL = os.environ.get("SMTP_MAIL", "")
-
-# SMTP mail password
 SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "")
-
-
-### RECAPTCHA设置 ###
-
 RECAPTCHA_SITE_KEY = os.environ.get("RECAPTCHA_SITE_KEY", "6LeXYRgqAAAAAF4HUOV5nuaEvWO8e465mBb5PUas")  # (str)
-
 RECAPTCHA_SECRET_KEY = os.environ.get("RECAPTCHA_SECRET_KEY", "6LeXYRgqAAAAACLGvLsDa1ebYurJR4XXeeK_PS10")  # (str)
-
 RECAPTCHA_VERIFY_URL = "https://recaptcha.net/recaptcha/api/siteverify"
 # https://www.google.com/recaptcha/api/siteverify"  # (str)
 
