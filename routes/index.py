@@ -11,6 +11,6 @@ from flask import render_template, Blueprint, redirect, current_app
 indexBlueprint = Blueprint("index", __name__)
 
 
-@indexBlueprint.route("/")
+@indexBlueprint.route("/index")
 def blog(by="timeStamp", sort="desc"):
     return render_template("index.html")
