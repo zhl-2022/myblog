@@ -5,8 +5,7 @@ Time:       2025-01-02-22:05
 User:       zhl
 Details:       
 """
-import base64
-from flask import render_template, Blueprint, redirect, current_app
+from flask import render_template, Blueprint
 
 indexBlueprint = Blueprint("index", __name__)
 
