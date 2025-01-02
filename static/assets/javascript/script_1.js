@@ -63,7 +63,9 @@ const INVISIBLE = '_INVISIBLE_';
 
 const PI_2 = Math.PI * 2;
 const PI_HALF = Math.PI * 0.5;
-
+if (typeof Stage === 'undefined') {
+    console.error('Stage is not defined');
+}
 // Stage.disableHighDPI = true;
 const trailsStage = new Stage('trails-canvas');
 const mainStage = new Stage('main-canvas');
