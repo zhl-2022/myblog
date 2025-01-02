@@ -54,6 +54,7 @@ app.register_blueprint(verifyUserBlueprint)
 app.register_blueprint(single_blogBlueprint)
 app.register_blueprint(addBlueprint)
 app.register_blueprint(editBlueprint)
+app.register_blueprint(indexBlueprint)
 
 
 @cache.memoize(timeout=get_seconds_until_midnight())  # 缓存结果直到次日凌晨
