@@ -28,6 +28,7 @@ from routes.single_blog import single_blogBlueprint
 from routes.verifyUser import verifyUserBlueprint
 from routes.add import addBlueprint
 from routes.edit import editBlueprint
+from routes.index import indexBlueprint
 from pymongo import MongoClient
 
 

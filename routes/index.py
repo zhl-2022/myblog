@@ -11,5 +11,5 @@ indexBlueprint = Blueprint("index", __name__)
 
 
 @indexBlueprint.route("/index")
-def blog(by="timeStamp", sort="desc"):
+def index():
     return render_template("index.html")
